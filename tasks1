@@ -1,0 +1,35 @@
+# Create 20 files with .txt extensions and rename the firt 5 files to .yml extension
+jananirv@LAPTOP-KLQNB7V6:~$ touch file{1..20}.txt
+jananirv@LAPTOP-KLQNB7V6:~$ ls -ltr
+total 0
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file9.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file8.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file7.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file6.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file5.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file4.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file3.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file20.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file2.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file19.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file18.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file17.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file16.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file15.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file14.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file13.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file12.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file11.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file10.txt
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file1.txt
+jananirv@LAPTOP-KLQNB7V6:~$ mv file1.txt file1.yml
+jananirv@LAPTOP-KLQNB7V6:~$ mv file2.txt file2.yml
+jananirv@LAPTOP-KLQNB7V6:~$ mv file3.txt file3.yml
+jananirv@LAPTOP-KLQNB7V6:~$ mv file4.txt file4.yml
+jananirv@LAPTOP-KLQNB7V6:~$ mv file5.txt file5.yml
+jananirv@LAPTOP-KLQNB7V6:~$ ls -ltr *yml
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file5.yml
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file4.yml
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file3.yml
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file2.yml
+-rw-r--r-- 1 jananirv jananirv 0 Aug 16 15:36 file1.yml
