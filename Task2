@@ -1,0 +1,17 @@
+1. Create a file with .txt extension (/home/demo.txt). 
+Change the permission set if that file, so that any user can read it, the group can read/write & owner can read/write/execute it.
+
+jananirv@LAPTOP-KLQNB7V6:~$ pwd
+/home/jananirv
+
+jananirv@LAPTOP-KLQNB7V6:~$ sudo touch /home/demo.txt
+
+jananirv@LAPTOP-KLQNB7V6:~$ ls -ltr /home/demo.txt
+-rw-r--r-- 1 root root 0 Aug 17 15:43 /home/demo.txt
+
+jananirv@LAPTOP-KLQNB7V6:~$ sudo chmod 467 /home/demo.txt
+
+jananirv@LAPTOP-KLQNB7V6:~$ ls -ltr /home/demo.txt
+-r--rw-rwx 1 root root 0 Aug 17 15:43 /home/demo.txt
+jananirv@LAPTOP-KLQNB7V6:~$
+
