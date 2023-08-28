@@ -1,0 +1,137 @@
+https://docs.google.com/document/d/1BKZv_19acbOvAj_faoS83pNTk_DT5CUsLsC0uppOtrw/edit?usp=sharing
+
+1. Get me IP address of a particular domain (guvi.in)
+
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$ ping guvi.in
+PING guvi.in (104.26.5.88) 56(84) bytes of data.
+64 bytes from 104.26.5.88 (104.26.5.88): icmp_seq=1 ttl=59 time=2.17 ms
+64 bytes from 104.26.5.88 (104.26.5.88): icmp_seq=2 ttl=59 time=1.44 ms
+64 bytes from 104.26.5.88 (104.26.5.88): icmp_seq=3 ttl=59 time=2.10 ms
+64 bytes from 104.26.5.88 (104.26.5.88): icmp_seq=4 ttl=59 time=2.06 ms
+64 bytes from 104.26.5.88 (104.26.5.88): icmp_seq=5 ttl=59 time=2.14 ms
+^C64 bytes from 104.26.5.88: icmp_seq=6 ttl=59 time=2.18 ms
+
+--- guvi.in ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5091ms
+rtt min/avg/max/mdev = 1.441/2.015/2.178/0.260 ms
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$
+
+2. How do I find my CPU/memory usage of my server?
+
+Method1:
+
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$ top
+top - 19:36:57 up 5 min,  1 user,  load average: 0.00, 0.06, 0.03
+Tasks:  34 total,   1 running,  33 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.8 us,  0.3 sy,  0.0 ni, 97.3 id,  0.5 wa,  0.0 hi,  0.1 si,  0.0 st
+MiB Mem :   7881.9 total,   7036.7 free,    443.9 used,    401.4 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   7213.3 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0  165704  10924   7972 S   0.3   0.1   0:00.65 systemd
+      2 root      20   0    2324   1260   1148 S   0.0   0.0   0:00.02 init-systemd(Ub
+      5 root      20   0    2352     80     68 S   0.0   0.0   0:00.00 init
+     40 root      19  -1   47732  14304  13316 S   0.0   0.2   0:00.13 systemd-journal
+
+Method 2: More specific to CPU information
+
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$ cat /proc/cpuinfo
+processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 158
+model name      : Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+stepping        : 9
+microcode       : 0xffffffff
+cpu MHz         : 2808.000
+cache size      : 6144 KB
+physical id     : 0
+siblings        : 8
+core id         : 0
+
+cpu cores       : 4
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 21
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves flush_l1d arch_capabilities
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed
+bogomips        : 5616.00
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 39 bits physical, 48 bits virtual
+power management:
+
+Method 3:
+
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$ lscpu
+Architecture:            x86_64
+  CPU op-mode(s):        32-bit, 64-bit
+  Address sizes:         39 bits physical, 48 bits virtual
+  Byte Order:            Little Endian
+CPU(s):                  8
+  On-line CPU(s) list:   0-7
+Vendor ID:               GenuineIntel
+  Model name:            Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+    CPU family:          6
+    Model:               158
+    Thread(s) per core:  2
+    Core(s) per socket:  4
+    Socket(s):           1
+    Stepping:            9
+
+
+
+
+
+
+
+
+
+To check RAM Space:
+
+Method 1: Use the free command to show in MB using -m option.
+
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$ free -m
+               total        used        free      shared  buff/cache   available
+Mem:            7881         457        6732           3         691        7201
+Swap:           2048           0        2048
+
+
+3. Test the connectivity between 2 nodes?
+
+Method 1:
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$ telnet 104.26.5.88 22
+
+Method 2:
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$ ping 104.26.5.88
+PING 104.26.5.88 (104.26.5.88) 56(84) bytes of data.
+
+Method 3: Use SSH to check the connectivity 
+
+$ ssh <ip_addr> of the host 
+
+4. I have deployed an application in guvi.com:9000, and logs shows my app is running, but I’m unable to view the page. Check whether my port is open or not ?"
+
+To check the connectivity for a known port use nmap 
+
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$ sudo apt-get install nmap
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libblas3 liblinear4 liblua5.3-0 lua-lpeg nmap-common
+Suggested packages:
+  liblinear-tools liblinear-dev ncat ndiff zenmap
+The following NEW packages will be installed:
+  libblas3 liblinear4 liblua5.3-0 lua-lpeg nmap nmap-common
+0 upgraded, 6 newly installed, 0 to remove and 84 not upgraded.
+Need to get 6113 kB of archives.
+After this operation, 26.8 MB of additional disk space will be used.
+
+jananirv@LAPTOP-KLQNB7V6:/mnt/c/WINDOWS/system32$ nmap 104.26.5.88  -Pn -p 22 | egrep -io 'open|closed|filtered'
+filtered
+
+
